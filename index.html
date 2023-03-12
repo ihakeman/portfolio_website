@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ian Hakeman's Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ian Hakeman" />
+    <meta name="description" content="Portfolio" />
+    <meta property="og:title" content="Ian Hakeman's Portfolio" />
+    <meta
+      property="og:description"
+      content="A portfolio for Ian Hakeman compiled in 2023"
+    />
+    <!-- <meta property="og:image" content="/some-image.png"> -->
+    <meta property="og:url" content="/this-page.html">
+    <meta property="og:site_name" content="Ian Hakeman's Portfolio" />
+    <!-- <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="image description">
+    -->
+    <link href="style.css" rel="stylesheet">
+    <!-- we don't have an icon so we didn't use it -->
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg"> -->
+
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body class="grid">
+    <a class="anchor" id="top"></a>
+    <div class="head-img">
+      <div class="image-box">
+        <figure class="other-image">
+          <img
+            class="other-image"
+            src="https://media.licdn.com/dms/image/D5603AQHPbE_ZkAuzAg/profile-displayphoto-shrink_800_800/0/1675144299630?e=1683763200&v=beta&t=_r5PM-JJFkU39y7iWxUvG28NRWmbk0sKWSHaGhWWZNg"
+            alt="Ian's Profile Picture"
+          />
+        </figure>
+      </div>
+    </div>
+
+    <header class="nav-position">
+      <a href="#top" class="title nav-item"
+        ><h1 class="titleheader">Ian Hakeman</h1></a
+      >
+      <nav class="nav-item">
+        <a class="navigate" href="#profile"> Profile </a>
+        <a class="navigate" href="#contact"> Contact </a>
+        <a class="navigate" href="#projects"> Projects </a>
+      </nav>
+      <div class="baseline"></div>
+    </header>
+
+    <main>
+      <section>
+        <a class="anchor" id="profile"></a>
+        <h2>Profile</h2>
+        <div class="image-box">
+          <figure class="other-image">
+            <img
+              class="other-image"
+              src="https://github.com/ihakeman/portfolio_website/blob/main/src/Ian%20Hakeman%20Graduation%20Photo.jpg?raw=true"
+            />
+            <figcaption>
+              I am graduating from Chapman University in May of 2023 with a
+              Bachelor of Science Degree in Computer Science and a minor in
+              Analytics.
+            </figcaption>
+          </figure>
+        </div>
+        <p>
+          I have experience in the follow areas:
+          <ul>
+            <li>Programming (C++, Java, Python, Haskell, R, Unity/C#, HTML/CSS/JavaScript)</li>
+            <li> 3D Modeling and Design (Fusion360, Solidworks)</li>
+            <li> 3D Printing (FDM, SLA, SLS, Polyjet)</li>
+          </ul>
+        </p>
+      </section>
+
+      <section>
+        <a class="anchor" id="contact"></a>
+        <h2>Contact</h2>
+        <div class="flex-wrapper">
+          <a href="https://www.linkedin.com/in/ianhakeman/" class="logo-link">
+            <div class="flex-item logo logo-link">
+              <figure class="other-image">
+                <img
+                  class="other-image"
+                  src="https://github.com/ihakeman/portfolio_website/blob/main/src/Linkedin-logo.png?raw=true"
+                  alt="Visit Ian's LinkedIn"
+                />
+              </figure>
+            </div>
+          </a>
+          <a href="https://github.com/ihakeman" class="logo-link">
+            <div class="flex-item logo logo-link">
+              <figure class="other-image flex-item">
+                <img
+                  class="other-image"
+                  src="https://github.com/ihakeman/portfolio_website/blob/main/src/GitHub-Logo.png?raw=true"
+                  alt="Visit Ian's GitHub"
+                />
+              </figure>
+            </div>
+          </a>
+          <a href="mailto:ihakeman00@gmail.com" class="logo-link">
+            <div class="flex-item logo logo-link">
+              <figure class="other-image flex-item">
+                <img
+                  class="other-image"
+                  src="https://github.com/ihakeman/portfolio_website/blob/main/src/email-icon.png?raw=true"
+                  alt="Email Ian"
+                />
+              </figure>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <a class="anchor" id="projects"></a>
+        <h2>Projects</h2>
+        <h4>C++ Database</h4>
+        <p>
+          I created a database from scratch in C++ to hold student and faculty data for a university. <a class="inline" href="https://github.com/ihakeman/portfolio/tree/main/C%2B%2B">Visit the code for this database.</a> 
+          The database includes many features and a variety of data structures are utilized. All the data structures were also constructed from scratch rather than using ones from existing libraries.
+        </p>
+        <p>
+          The options presented by the database interface include: 
+          <ul> 
+            <li> Display all students or faculty and their information - sorted by ID</li>
+            <li> Find and display a student's or faculty member's information given their ID</li>
+            <li> Display the information for a student's faculty advisor given the student ID</li>
+            <li> Display the information for all the student advisees given a faculty member ID</li>
+            <li> Add or delete (by ID) a student or faculty member</li>
+            <li> Change a student's advisor given student ID and new advisor ID</li>
+            <li> Remove an advisee from a faculty member given faculty and student IDs</li>
+            <li> Rollback recent changes</li>
+          </ul>
+
+        Additionally, all of the data is stored on database exit. The data structures used in the database are linked-lists, stacks, and binary search trees to hold various classes and other information for optimal algorithm runtime.
+        </p>
+
+        <h4>3D Modeled Cupholder</h4>
+        <p>
+          My car had a lack of usable cupholders, so I sought to rectify that by designing my own. While the area that I wanted it to fit in (a bin in the center console) at first look geometric, upon trying to measure it with calipers I found that not to be the case. Unfortunately, I was unable to measure the area around the bottom with calipers due to its depth, so instead I had to use the guess and check method. Fortunately, within a few iterations I was able to achieve perfect fitment. 
+          <div class="image-box">
+            <figure class="other-image">
+              <img
+                class="other-image"
+                src="https://github.com/ihakeman/portfolio_website/blob/main/src/Center_Console_Cupholder.JPG?raw=true"
+              />
+              <figcaption class="other-image">
+                The fitment of the cupholder is perfect on all edges.
+              </figcaption>
+            </figure>
+          </div>
+          The cupholder slides into place easily but does not have any lateral movement. Additionally, I was able to optimize the cupholder for the cups I most often use. The design was so effective that it gained the interest of Flyin' Miata, which will have them for sale starting in April of 2023. 
+          <a
+            href="https://flyinmiata.com/collections/you-design?page=1"
+            class="inline"
+            >Visit Flyin' Miata's YouDesign Program
+          </a>
+          if you would like to see the product when it goes on sale, or contact me with one of the links above to learn more about how I modeled this in Fusion360. I have not posted the files for the design given my partnership with Flyin' Miata.
+        </p>
+        <p>
+          The cupholder includes additional features past ideal fitment for both itself and for the cups it contains. There is a slot along the back side of the cupholder so that cups with handles can potentially fit, or cassette tape boxes can be slid in so that they still fit within the center console. On both sides of the cupholder there are also pockets for storage to help organize the center console. Another design consideration for this was to minimize material usage to save weight and cost when 3D printed during production.
+        </p>
+
+        <h4> 3D Printed Switch Plate </h4>
+        <p>My car didn't come with a garage door opener and I also added a couple of auxiliary switches, so I needed a switch plate to house these items. I modeled one in Fusion360 and tweaked the fit a few times until it was satisfactory to me. This model was then printed out of ASA because ASA is resistant to heat and UV light better than PETG and other more common 3D printing materials. These properties are critical for a car interior. </p>
+        <p> Quite a bit of adjustment had to be made to ensure that it printed correctly considering that a large area of the print was on the print bed, something which can lead to significant warping with ASA. The part was oriented upside down on the build plate of the Prusa i3 Mk3S+ FDM 3D printer to minimize the amount of support material needed and so that the top side of the part would have the smoothest surface finish. For that very reason I didn't want to use glue or other adhesives which might prevent warping but would ruin the surface finish. Instead, I had to devise other strategies such as inserting a wall around the part to prevent drafts from warping it. </p>
+        <div class="image-box">
+            <figure class="other-image">
+              <img
+                class="other-image"
+                src="https://github.com/ihakeman/portfolio_website/blob/main/src/Center_Console_Switch_Plate.jpg?raw=true"
+              />
+              <figcaption class="other-image">
+                This image shows the quality surface finish that matches the rest of the car interior as well as the excellent fitment.
+              </figcaption>
+            </figure>
+          </div>
+        <p>
+        Overall, this project taught me a lot about troubleshooting with 3D printers and what steps can be taken to optimize the finished part.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      This portfolio was compiled in March 2023
+    </footer>
+  </body>
+</html>

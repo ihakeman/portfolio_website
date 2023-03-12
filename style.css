@@ -1,0 +1,350 @@
+* {
+    font-family: "Roboto Slab", serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    --spacing: 10px;
+    margin: 0;
+    background-color: #f7e702;
+    padding: var(--spacing);
+    position: relative;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "pic head"
+      "pic main"
+      "pic footer";
+  
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 4em 1fr 3em;
+  }
+  
+  header {
+    grid-area: head;
+    width: calc(80% - 5px);
+    position: fixed;
+    background-color: #f7e702;
+    padding: 10px;
+    padding-left: 0px;
+    top: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  
+  nav {
+    display: flex;
+    gap: var(--spacing); /*could also be done with padding*/
+  }
+  
+  nav a {
+    text-decoration: none;
+  }
+  
+  @media (max-width: 500px) {
+    .head-img {
+      display: none;
+    }
+    .grid {
+      grid-template-areas:
+        "head"
+        "main"
+        "footer";
+  
+      grid-template-columns: 1fr;
+      grid-template-rows: 4em 1fr 3em;
+    }
+    header {
+      width: 100%;
+      padding-left: 10px;
+    }
+  }
+  
+  main {
+    grid-area: main;
+  }
+  
+  footer {
+    grid-area: footer;
+  }
+  
+  .head-img {
+    grid-area: pic;
+  }
+  
+  /*typography styling */
+  h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    font-family: "Bebas Neue", cursive;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 2.25rem;
+    font-family: "Bebas Neue", cursive;
+    margin-bottom: 0.25rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  h5 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  h6 {
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  @media (max-width: 270px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+  main {
+    width: min(700px, 100%);
+    margin: auto;
+  }
+  
+  /*image styling */
+  .full {
+    /*full width*/
+    width: calc(100% + 2 * var(--spacing));
+    margin: calc(-1 * var(--spacing));
+  }
+  
+  .baseline {
+    height: 5px;
+    margin: 0;
+    width: 100%;
+    background-color: black;
+  }
+  
+  .image-box {
+    border: calc(var(--spacing) / 2) solid;
+    margin: auto;
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+    border-radius: var(--spacing);
+    width: min(700px, 100%);
+  }
+  
+  figure .other-image {
+    display: block;
+    margin: auto;
+    width: 100%;
+    border-radius: calc(var(--spacing) / 2);
+  }
+  
+  figure {
+    margin: var(--spacing);
+  }
+  
+  .head-img {
+    position: fixed;
+    width: calc(20% - 15px);
+    margin-top: -5px;
+  }
+  
+  /*button styling*/
+  button {
+    color: #dddedc;
+    background: #3b3b3b;
+    font-size: 1.25rem;
+    margin: calc(var(--spacing) / 2);
+    padding: 0.25em;
+    border-radius: calc(var(--spacing) / 2);
+  }
+  button:hover {
+    background: #000000;
+    cursor: pointer;
+  }
+  
+  button:active {
+    border: #ffffff;
+  }
+  
+  .button-disabled,
+  .button-disabled:hover,
+  .button-disabled:active {
+    /* want to be grayed out and not clickable */
+    background: #4d4d4d;
+    cursor: not-allowed;
+    opacity: 0.6;
+    border: revert;
+  }
+  
+  .button-success {
+    background: #497a28;
+  }
+  .button-success:hover {
+    background: #31591c;
+  }
+  
+  .button-error {
+    background: #7a2828;
+  }
+  .button-error:hover {
+    background: #591c1c;
+  }
+  
+  /*Link Styling*/
+  a {
+    background-color: #1fa5d1;
+    color: white;
+    padding: 0.25em;
+    text-decoration: none;
+  }
+  a:visited {
+    background-color: #1fa5d1;
+  }
+  
+  a:hover {
+    background-color: #116885;
+    text-decoration: underline;
+  }
+  a:active {
+    background-color: black;
+    text-decoration: underline;
+  }
+  a:focus {
+    text-decoration: underline;
+  }
+  .navigate:visited {
+    background-color: #1fa5d1;
+  }
+  .navigate:hover {
+    background-color: #116885;
+    text-decoration: underline;
+  }
+  .navigate:active {
+    background-color: black;
+    text-decoration: underline;
+  }
+  .navigate:focus {
+    text-decoration: underline;
+  }
+  
+  .inline {
+    padding: revert;
+    background-color: revert;
+    color: #1fa5d1;
+    text-decoration: none;
+  }
+  .inline:hover {
+    background-color: revert;
+    text-decoration: underline;
+  }
+  .inline:active {
+    background-color: revert;
+    color: black;
+    text-decoration: underline;
+  }
+  .inline:visited {
+    background-color: revert;
+    color: revert;
+  }
+  .inline:focus {
+    text-decoration: underline;
+  }
+  
+  .title {
+    text-decoration: none;
+    background-color: revert;
+    display: flex;
+    align-items: center;
+    color: black;
+    height: 3.5rem;
+    padding: 0;
+  }
+  .title:hover {
+    text-decoration: underline;
+    background-color: revert;
+  }
+  .title:active {
+    text-decoration: underline;
+    background-color: gray;
+  }
+  .title:focus {
+    text-decoration: underline;
+  }
+  
+  .titleheader {
+    margin: 0;
+    padding: 0;
+  }
+  .nav-item {
+    align-items: center;
+  }
+  
+  footer {
+    margin-top: calc(var(--spacing) * 3);
+    margin-bottom: calc(var(--spacing));
+    text-align: center;
+  }
+  
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+  }
+  
+  .flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .flex-item {
+    display: flex;
+  }
+  
+  .logo {
+    border: calc(var(--spacing) / 2) solid;
+    margin: auto;
+    border-radius: var(--spacing);
+    background-color: transparent;
+    color: black;
+    height: 80px;
+    max-width: 80px;
+    object-fit: cover;
+  }
+  
+  .logo-link {
+    background-color: transparent;
+    padding: 0;
+  }
+  .logo-link:hover {
+    background-color: transparent;
+    color: gray;
+  }
+  .logo-link:focus {
+    background-color: gray;
+  }
+  .logo-link:active {
+    background-color: transparent;
+    color: black;
+  }
+  
